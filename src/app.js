@@ -3,6 +3,7 @@ const path= require('path')
 const hbs= require('hbs')
 const geocode =require('../utils/geocode')
 const forecast =require('../utils/forecast')
+const port = process.env.PORT || 5000
 
 
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -69,11 +70,7 @@ app.get('/weather',(req,res)=>{
 
 
 
-    // res.send({
-    //     forecast:'sunny now',
-    //     location:'boston here boy Prashant Singh',
-    //     address :req.query.address
-    // })
+    
 })
 app.get('/products',(req,res)=>{
         
@@ -96,7 +93,7 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(5000,()=>{
-    console.log("The server is up running on port 5000")
+app.listen(port,()=>{
+    console.log("The server is up running on port ",port)
 })
 
