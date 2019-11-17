@@ -44,5 +44,5 @@ weatherForm.addEventListener('submit',(e)=>{
 
 
 
-    // console.log('testing mae h')
+    
 })
